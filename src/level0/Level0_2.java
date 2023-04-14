@@ -1,6 +1,6 @@
 package level0;
 
-import java.util.Arrays;
+import java.util.*;
 
 class Solution21 { // 점의 위치 구하기
 	public int solution(int[] dot) {
@@ -65,7 +65,6 @@ class Solution24 { // 배열 원소의 길이
 class Solution25 { // 문자열 뒤집기
 	public String solution(String my_string) {
 		String answer = "";
-		int x = -1;
 		for (int i = 0; i < my_string.length(); i++) {
 			answer = answer.concat(my_string.charAt(my_string.length() - i - 1) + "");
 		}
@@ -76,7 +75,6 @@ class Solution25 { // 문자열 뒤집기
 class Solution25_2 { // 문자열 뒤집기
 	public String solution(String my_string) {
 		String answer = "";
-		int x = -1;
 		for (int i = 0; i < my_string.length(); i++) {
 			answer = answer.concat(my_string.charAt(my_string.length() - i - 1) + "");
 		}

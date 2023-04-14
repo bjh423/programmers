@@ -1,5 +1,6 @@
 package level0;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 class Solution41 { // 중복된 숫자 개수
@@ -70,5 +71,23 @@ class Solution44_2 { // 숫자찾기
 		} else {
 			return count2 - answer + 1;
 		}
+	}
+}
+
+class Solution45 { //대문자와 소문자
+	public String solution(String my_string) {
+		String answer = "";
+		String[] answer1 = my_string.split("");
+		String[] lower = my_string.toLowerCase().split("");
+		String[] upper = my_string.toUpperCase().split("");
+		for (int i = 0; i < answer1.length; i++) {
+			if (answer1[i].equals(lower[i])) {
+				answer = answer.concat(upper[i]);
+			} else {
+				answer = answer.concat(lower[i]);
+			}
+		}
+
+		return answer;
 	}
 }
