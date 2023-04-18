@@ -243,3 +243,57 @@ class Solution54 { //A를 B로 만들기
         return answer;
     }
 }
+
+class Solution55 { //인덱스 바꾸기
+    public String solution(String my_string, int num1, int num2) {
+        String a = my_string.substring(0,num1);
+        String b = my_string.substring(num1, num1+1);
+        String c = my_string.substring(num1+1,num2);
+        String d = my_string.substring(num2, num2+1);
+        String e = my_string.substring(num2+1);
+        System.out.println(a+d+c+b+e);
+        return a+d+c+b+e;
+    }
+}
+
+class Solution56 { //배열 회전시키기
+    public int[] solution(int[] numbers, String direction) {
+        int[] answer = new int[numbers.length];
+        if (direction.equals("right")) {
+            int y = numbers[answer.length-1];
+        	answer[0] = y;
+        	System.arraycopy(numbers, 0, answer, 1, answer.length-1);
+		} else {
+            int y = numbers[0];
+        	answer[answer.length-1] = y;
+        	System.arraycopy(numbers, 1, answer, 0, answer.length-1);
+		}
+        return answer;
+    }
+}
+
+class Solution57 { //외계행성의 나이
+    public String solution(int age) {
+        String answer = "";
+        String a = age+"";
+        for (int i = 0; i < a.length(); i++) {
+            answer += (char)((int)a.charAt(i)+49);
+		}
+        
+        return answer;
+    }
+}
+
+//class Solution { //k번째수
+//    public int[] solution(int[] array, int[][] commands) {
+//    	int[] answer = new int[commands.length];
+//        for (int i = 0; i < commands.length; i++) {
+//			int[] x = Arrays.copyOfRange(array, commands[i][0]-1, commands[i][1]);
+//			System.out.println(Arrays.toString(x));
+//			Arrays.sort(x);
+//			answer[i] = x[commands[i][2]-1];
+//		}
+//
+//        return answer;
+//    }
+//}
